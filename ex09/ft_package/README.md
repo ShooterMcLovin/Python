@@ -12,3 +12,8 @@ From the base directory:
 ```bash
 python3 tester.py
 ```
+## Check
+To verify that the package is installed by running
+```bash
+pip show ft_package
+```
