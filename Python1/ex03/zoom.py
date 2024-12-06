@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from load_image import ft_load
 
-def zoom_image(image_data, zoom_factor=0.1):
+def zoom_image(path, zoom_factor):
     try:
         # Get the original shape
-        img = ft_load("animal.jpeg")
+        img = ft_load(path)
         original_shape = img.shape
         # Calculate new shape based on zoom factor
         new_height = int(original_shape[0] * zoom_factor)
@@ -38,11 +38,9 @@ def zoom_image(image_data, zoom_factor=0.1):
 
 if __name__ == "__main__":
     try:
-        # Load the image data from load_image.py
-        image_data = np.array(Image.open("animal.jpeg"))
 
         # Perform zoom operation
-        zoom_image(image_data, zoom_factor=0.5)
+        zoom_image(path='animal.jpeg', zoom_factor=0.5)
 
     except FileNotFoundError:
         print("Error: 'animal.jpeg' file not found. Please check the file path.")
