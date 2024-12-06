@@ -2,9 +2,9 @@ from PIL import Image
 import numpy as np
 
 def ft_load(path: str) -> np.ndarray:
-"""
-Loads an image and returns its pixel information
-"""
+    """
+    Loads an image and returns its pixel information
+    """
     try:
         img = Image.open(path)
         print(f"The format of the image is: {img.format}")

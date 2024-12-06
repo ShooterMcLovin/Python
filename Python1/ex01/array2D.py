@@ -1,9 +1,9 @@
 
 
 def slice_me(family: list, start: int, end: int) -> list:
-"""
-Slices a list based on start and end
-"""
+    """
+    Slices a list based on start and end
+    """
     if family.__class__ != list:
         raise ValueError("The input should be a list.")
 
