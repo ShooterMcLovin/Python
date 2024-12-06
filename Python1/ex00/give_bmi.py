@@ -8,7 +8,7 @@ def give_bmi(height: list[int | float],
     """
     bmis = []
     for h, w in zip(height, weight):
-        if h > 0:
+        if h > 0 and w > 0:
             bmi = w / (h * h)
             bmis.append(bmi)
         else:
