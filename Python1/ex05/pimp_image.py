@@ -4,6 +4,9 @@ from PIL import Image
 from load_image import ft_load
 
 def ft_invert(array):
+"""
+Reverses the color of an image
+"""
     img = ft_load("landscape.jpeg")
     # Invert the image (255 - pixel values) for RGB images
     img_inverted = 255 - img
@@ -14,6 +17,9 @@ def ft_invert(array):
 
 
 def ft_red(array):
+"""
+Turns image red
+"""
     img = ft_load("landscape.jpeg")
     if img.shape[2] == 3:
         img = np.mean(img, axis=2).astype(np.uint8)
@@ -22,6 +28,9 @@ def ft_red(array):
     plt.show()
 
 def ft_green(array):
+"""
+Turns image green
+"""
     img = ft_load("landscape.jpeg")
     if img.shape[2] == 3:
         img = np.mean(img, axis=2).astype(np.uint8)
@@ -30,6 +39,9 @@ def ft_green(array):
     plt.show()
 
 def ft_blue(array):
+"""
+Turns image blue
+"""
     img = ft_load("landscape.jpeg")
     if img.shape[2] == 3:
         img = np.mean(img, axis=2).astype(np.uint8)
@@ -38,6 +50,9 @@ def ft_blue(array):
     plt.show()
 
 def ft_grey(array):
+"""
+Turns image to grayscale
+"""
     img = ft_load("landscape.jpeg")
     if img.shape[2] == 3:
         img = np.mean(img, axis=2).astype(np.uint8)

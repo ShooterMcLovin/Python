@@ -4,6 +4,9 @@ from PIL import Image
 from load_image import ft_load
 
 def zoom_image(path, zoom_factor):
+"""
+Zoom on an image by slicing
+"""
     try:
         # Get the original shape
         img = ft_load(path)

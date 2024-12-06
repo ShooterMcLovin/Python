@@ -4,6 +4,9 @@ from PIL import Image
 from load_image import ft_load
 
 def rotate_image():
+"""
+Rotates an image 90deg
+"""
     try:
         # Load the image using the function from load_image.py
         img = ft_load("animal.jpeg")
