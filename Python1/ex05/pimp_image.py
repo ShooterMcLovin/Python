@@ -18,6 +18,7 @@ def ft_red(array):
     if img.shape[2] == 3:
         img = np.mean(img, axis=2).astype(np.uint8)
     plt.imshow(img, cmap='Reds' if img.ndim == 2 else None)
+    plt.title("Red Image")
     plt.show()
 
 def ft_green(array):
@@ -25,6 +26,7 @@ def ft_green(array):
     if img.shape[2] == 3:
         img = np.mean(img, axis=2).astype(np.uint8)
     plt.imshow(img, cmap='Greens' if img.ndim == 2 else None)
+    plt.title("Green Image")
     plt.show()
 
 def ft_blue(array):
@@ -32,6 +34,7 @@ def ft_blue(array):
     if img.shape[2] == 3:
         img = np.mean(img, axis=2).astype(np.uint8)
     plt.imshow(img, cmap='Blues' if img.ndim == 2 else None)
+    plt.title("Blue Image")
     plt.show()
 
 def ft_grey(array):
@@ -39,4 +42,5 @@ def ft_grey(array):
     if img.shape[2] == 3:
         img = np.mean(img, axis=2).astype(np.uint8)
     plt.imshow(img, cmap='grey' if img.ndim == 2 else None)
+    plt.title("Grayscale Image")
     plt.show()
