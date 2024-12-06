@@ -1,0 +1,8 @@
+python 3.10
+
+python3 -m pip install
+matplotlib
+numpy
+pillow(PIL)
+tdqm
+flake8
