@@ -18,7 +18,7 @@ def give_bmi(height: list[int | float],
 
 def apply_limit(bmi: list[Union[int, float]], limit: int) -> list[bool]:
     """
-    Gives list of BMIs based on threshold(limit)
+    Returns True or False depending on threshold(limit), > or < then the treshold
     """
     limitList = []
     for B in bmi:
