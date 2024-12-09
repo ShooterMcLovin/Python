@@ -9,21 +9,13 @@ def rotate_image():
     Rotates an image 90deg
     """
     try:
-        # Load the image using the function from load_image.py
-        img = zoom_image("animal.jpeg")
-
-        # Check the shape of the image
+        # img = zoom_image("animal.jpeg", 0.5)
+        img = ft_load("animal.jpeg")
         originalShape = img.shape
-        print(f"Original shape of the image: {originalShape}")
+        print(f"Shape of the zoomed image: {originalShape}")
 
-        # Zoom into the image (example slicing: slice from 100 to new height and width)
-        new_height = int(originalShape[0] * 1.5)
-        new_width = int(originalShape[1] * 1.5)
-        zoomed_image = img[100:new_height + 125, 400:new_width + 350]
-        print(f"New shape after slicing: {zoomed_image.shape}")
-        print(np.array(zoomed_image))
-        # Rotate the zoomed image (using np.rot90 or another method)
-        rotated_image = np.rot90(zoomed_image)
+        print(np.array(img))
+        rotated_image = np.rot90(img)
 
         # If the image has 3 channels (RGB), convert to grayscale by averaging across channels
         if rotated_image.shape[2] == 3:

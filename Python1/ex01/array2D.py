@@ -1,10 +1,10 @@
-
+import numpy as np
 
 def slice_me(family: list, start: int, end: int) -> list:
     """
     Slices a list based on start and end
     """
-    if family.__class__ != list:
+    if family.__class__ != list or family.__class__ != np.array():
         raise ValueError("The input should be a list.")
 
     row_length = len(family[0]) if family else 0
