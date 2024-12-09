@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
-from load_image import ft_load
+from load_image import ft_load, slice_me
 
 def zoom_image(path, zoom_factor):
     """
@@ -16,7 +16,7 @@ def zoom_image(path, zoom_factor):
         new_width = int(original_shape[1] * zoom_factor)
 
         # Perform the zoom by slicing the image
-        zoomed_image = img[100:new_height + 125, 400:new_width + 350]
+        zoomed_image = img[int((original_shape[0] / 2) - new_height / 2) :new_height, int((original_shape[1] / 2) - new_width / 2):new_width]
 
         # Display the new shape after zooming
         print(f"New shape after slicing: {zoomed_image.shape}")
