@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 from load_image import ft_load
+from zoom import zoom_image
 
 def rotate_image():
     """
@@ -9,7 +10,7 @@ def rotate_image():
     """
     try:
         # Load the image using the function from load_image.py
-        img = ft_load("animal.jpeg")
+        img = zoom_image("animal.jpeg")
 
         # Check the shape of the image
         originalShape = img.shape
