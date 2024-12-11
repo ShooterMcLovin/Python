@@ -6,7 +6,6 @@ def main():
         path = '../life_expectancy_years.csv'
         csv_data = load(path)
         country = 'Canada'
-
         country_row = csv_data[csv_data['country'] == country]
     
         if not country_row.empty:
@@ -14,6 +13,9 @@ def main():
         else:
             print(f"Country '{country}' not found in the dataset.")
 
+        print(country_row['2100'].values)####
+        print(country_row['2100'].name)####
+        print(country_row['2100'])####
         
     except FileNotFoundError:
         print(f"Error: The file at path '{path}' was not found.")
