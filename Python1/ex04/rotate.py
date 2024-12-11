@@ -4,18 +4,22 @@ from PIL import Image
 from load_image import ft_load
 from zoom import zoom_image
 
-def rotate_image():
+def rotate_image(path):
     """
     Rotates an image 90deg
     """
     try:
-        img = zoom_image("animal.jpeg", 0.5)
-        # img = ft_load("animal.jpeg")
-        originalShape = img.shape
-        print(f"Shape of the zoomed image: {originalShape}")
+        # Load the image using the function from load_image.py
+        img = zoom_image(path, 0.5)
 
+        # Check the shape of the image
+        print(f"Zoomed shape of the image before rotation: {img.shape}")
         print(np.array(img))
+
+        # Rotate the zoomed image (using np.rot90 or another method)
         rotated_image = np.rot90(img)
+        print(f"Shape of the image after rotation: {rotated_image.shape}")
+        print(np.array(rotated_image))
 
         # If the image has 3 channels (RGB), convert to grayscale by averaging across channels
         if rotated_image.shape[2] == 3:
@@ -35,4 +39,4 @@ def rotate_image():
 
 
 if __name__ == "__main__":
-        rotate_image()
+        rotate_image('animal.jpeg')
