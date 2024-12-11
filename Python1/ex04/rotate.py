@@ -9,8 +9,8 @@ def rotate_image():
     Rotates an image 90deg
     """
     try:
-        # img = zoom_image("animal.jpeg", 0.5)
-        img = ft_load("animal.jpeg")
+        img = zoom_image("animal.jpeg", 0.5)
+        # img = ft_load("animal.jpeg")
         originalShape = img.shape
         print(f"Shape of the zoomed image: {originalShape}")
 

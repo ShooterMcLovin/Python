@@ -2,6 +2,9 @@ from PIL import Image
 import numpy as np
 
 def ft_load(path: str) -> np.ndarray:
+    """
+Loads an image and returns its pixel information as an numpy array
+    """
     try:
         img = Image.open(path)
         print(f"The format of the image is: {img.format}")
@@ -10,7 +13,6 @@ def ft_load(path: str) -> np.ndarray:
 
         print(f"The shape of the image is: {pixels.shape}")
         print(pixels)
-        
         return pixels
     
     except FileNotFoundError:

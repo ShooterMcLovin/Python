@@ -1,4 +1,3 @@
-from typing import Union
 
 
 def give_bmi(height: list[int | float],
@@ -16,9 +15,9 @@ def give_bmi(height: list[int | float],
     return bmis
 
 
-def apply_limit(bmi: list[Union[int, float]], limit: int) -> list[bool]:
+def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     """
-    Returns True or False depending on threshold(limit), > or < then the treshold
+    Returns True or False depending on threshold(limit)
     """
     limitList = []
     for B in bmi:
