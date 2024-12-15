@@ -56,25 +56,16 @@ def main():
 
         # Adjust the x-ticks (show every 40th year)
         xticks = x[::40]
-        plt.xticks(xticks, rotation=45)
 
-        # Adjust the y-ticks based on population data range (in billions)
-        # yticks = np.linspace(min(np.array(y_converted) / 1e6), max(np.array(y_converted2) / 1e6), 20)  # Dynamic range for y-ticks in millions
+        # Adjust the y-ticks based on population data range (in millions)
         min_y = min(np.array(y_converted) / 1e6)  # Minimum population in millions
         max_y = max(np.array(y_converted2) / 1e6)  # Maximum population in millions
         yticks = np.arange(min_y // 20 * 20, max_y + 20, 20)  # Step by 20M
-        # yticks = yticks[::2]
-
+       
+        plt.xticks(xticks, rotation=45)
         plt.yticks(yticks, rotation=45)
-        
-        # Add grid for better readability
-        plt.grid(True)
 
-        # Add the legend to differentiate countries
         plt.legend()
-
-        # Show the plot
-        plt.tight_layout()
         plt.show()
 
     except FileNotFoundError:
