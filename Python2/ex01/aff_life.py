@@ -1,5 +1,7 @@
 from load_csv import load
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
 def main():
     try:
@@ -13,9 +15,16 @@ def main():
         else:
             print(f"Country '{country}' not found in the dataset.")
 
-        print(country_row['2100'].values)####
-        print(country_row['2100'].name)####
-        print(country_row['2100'])####
+        x = np.array(csv_data.columns[1:])
+        y = country_row.iloc[0, 1:].values
+
+        plt.title(f"Life Expectancy in {country} (1800-2100)") 
+        plt.xlabel("Year") 
+        plt.ylabel("Life Expectancy (years)") 
+        plt.plot(x, y, color="green", label=country) 
+        xticks = x[::40]
+        plt.xticks(xticks, rotation=45)  
+        plt.show()
         
     except FileNotFoundError:
         print(f"Error: The file at path '{path}' was not found.")

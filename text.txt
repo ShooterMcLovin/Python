@@ -1,0 +1,4 @@
+(python3:5021): Gtk-WARNING **: 14:20:41.918: Failed to load icon /home/alpicard/.local/lib/python3.10/site-packages/matplotlib/mpl-data/images/filesave-symbolic.svg: Error opening file /home/alpicard/.local/lib/python3.10/site-packages/matplotlib/mpl-data/images/filesave-symbolic.svg: No such file or directory
+
+Error: Failed to convert value(s) to axis units: array(['500k'], dtype=object)
+
